@@ -14,6 +14,7 @@
 		62E3A32419397BE400BD3F0F /* RobotAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E3A32319397BE400BD3F0F /* RobotAction.m */; };
 		62E3A330193D3F3B00BD3F0F /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E3A32F193D3F3B00BD3F0F /* Bullet.m */; };
 		65CC915A196141CF00838899 /* TurretRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CC9159196141CF00838899 /* TurretRobot.m */; };
+		844E8F29196322A70031AE8A /* AwesomeBestRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8F28196322A70031AE8A /* AwesomeBestRobot.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -79,6 +80,8 @@
 		62E3A32F193D3F3B00BD3F0F /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Source/Bullet.m; sourceTree = "<group>"; };
 		65CC9158196141CF00838899 /* TurretRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TurretRobot.h; path = Source/Robot/TurretRobot.h; sourceTree = "<group>"; };
 		65CC9159196141CF00838899 /* TurretRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TurretRobot.m; path = Source/Robot/TurretRobot.m; sourceTree = "<group>"; };
+		844E8F27196322A70031AE8A /* AwesomeBestRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeBestRobot.h; sourceTree = "<group>"; };
+		844E8F28196322A70031AE8A /* AwesomeBestRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeBestRobot.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				65CC9159196141CF00838899 /* TurretRobot.m */,
 				BC7636F6195BBCAA0070222B /* AdvancedRobot.h */,
 				BC7636F7195BBCAA0070222B /* AdvancedRobot.m */,
+				844E8F27196322A70031AE8A /* AwesomeBestRobot.h */,
+				844E8F28196322A70031AE8A /* AwesomeBestRobot.m */,
 				BC7636F8195BBCAA0070222B /* SimpleRobot.h */,
 				BC7636F9195BBCAA0070222B /* SimpleRobot.m */,
 			);
@@ -386,6 +391,7 @@
 			files = (
 				6236628E19612C5500ECB220 /* AdvancedRobot.m in Sources */,
 				629FCFF4193E71C300896E8C /* GameOverScene.m in Sources */,
+				844E8F29196322A70031AE8A /* AwesomeBestRobot.m in Sources */,
 				6244629A1937DDD300895F2D /* Robot.m in Sources */,
 				BC7636FB195BBCAA0070222B /* SimpleRobot.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
