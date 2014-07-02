@@ -12,7 +12,9 @@
 typedef NS_ENUM(NSInteger, TurretState) {
     AwesomeStateScanning,
     AwesomeStateFiring,
-    AwesomeStateMoving
+    AwesomeStateMoving,
+    AwesomeTurretMode,
+    AwesomeIdleState
 };
 
 static const float GUN_ANGLE_TOLERANCE = 2.0f;
@@ -26,6 +28,10 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
     CGFloat gunAngle;
     CGFloat timeIdle;
     CGRect myRect;
+    BOOL _didBulletHit;
+    BOOL _reverse;
+    CGPoint _hitEnemyAngle;
+    int _turnAmount;
 }
 
 - (id)init {
@@ -69,13 +75,46 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
                 }
                 break;
             case AwesomeStateMoving:
+                _turnAmount = 10;
+                _timeSinceLastEnemyHit = self.currentTimestamp;
                 if (_direction) {
                     [self moveAhead:10];
                 } else{
                     [self moveBack:10];
                 }
+                if (_timeSinceLastEnemyHit > 0.f) {
+                    [self cancelActiveAction];
+                    _currentState = AwesomeTurretMode;
+                }
+                break;
+            case AwesomeTurretMode:
+                [self turretFunction];
+                break;
+            case AwesomeIdleState:
+                [self turretFunction];
                 break;
         }
+    }
+}
+
+- (void) turretFunction {
+    if (!_didBulletHit) {
+        [self turnGunRight:_turnAmount];
+        [self shoot];
+//        _hitEnemyAngle = [self gunHeadingDirection];
+    }else{
+        [self turnGunLeft:_turnAmount];
+        [self shoot];
+    }
+    if (_timeSinceLastEnemyHit > 10.f) {
+        [self moveBack:15];
+    }
+}
+
+- (void)bulletHitEnemy:(Bullet *)bullet {
+    _didBulletHit = !_didBulletHit;
+    if (_turnAmount > 0){
+        _turnAmount -= 5;
     }
 }
 
