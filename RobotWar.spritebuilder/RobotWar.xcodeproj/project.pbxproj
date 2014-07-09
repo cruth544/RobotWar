@@ -16,7 +16,8 @@
 		65CC915A196141CF00838899 /* TurretRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CC9159196141CF00838899 /* TurretRobot.m */; };
 		840642DD19636E1500C45353 /* NewRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 840642DC19636E1500C45353 /* NewRobot.m */; };
 		844E8F29196322A70031AE8A /* AwesomeBestRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8F28196322A70031AE8A /* AwesomeBestRobot.m */; };
-		84F7FC2C1963860B00778913 /* DecadeSix.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FC2B1963860B00778913 /* DecadeSix.m */; };
+		84D988991967F2DA007AE225 /* WetDaddyBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D988981967F2DA007AE225 /* WetDaddyBot.m */; };
+		84F7FC2C1963860B00778913 /* DecadeSixTEC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FC2B1963860B00778913 /* DecadeSixTEC.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -86,8 +87,10 @@
 		840642DC19636E1500C45353 /* NewRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRobot.m; sourceTree = "<group>"; };
 		844E8F27196322A70031AE8A /* AwesomeBestRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeBestRobot.h; sourceTree = "<group>"; };
 		844E8F28196322A70031AE8A /* AwesomeBestRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeBestRobot.m; sourceTree = "<group>"; };
-		84F7FC2A1963860B00778913 /* DecadeSix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecadeSix.h; sourceTree = "<group>"; };
-		84F7FC2B1963860B00778913 /* DecadeSix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecadeSix.m; sourceTree = "<group>"; };
+		84D988971967F2DA007AE225 /* WetDaddyBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WetDaddyBot.h; sourceTree = "<group>"; };
+		84D988981967F2DA007AE225 /* WetDaddyBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WetDaddyBot.m; sourceTree = "<group>"; };
+		84F7FC2A1963860B00778913 /* DecadeSixTEC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecadeSixTEC.h; sourceTree = "<group>"; };
+		84F7FC2B1963860B00778913 /* DecadeSixTEC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecadeSixTEC.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -153,8 +156,10 @@
 		624A3882193E7AF90054705C /* Robots */ = {
 			isa = PBXGroup;
 			children = (
-				84F7FC2A1963860B00778913 /* DecadeSix.h */,
-				84F7FC2B1963860B00778913 /* DecadeSix.m */,
+				84F7FC2A1963860B00778913 /* DecadeSixTEC.h */,
+				84F7FC2B1963860B00778913 /* DecadeSixTEC.m */,
+				84D988971967F2DA007AE225 /* WetDaddyBot.h */,
+				84D988981967F2DA007AE225 /* WetDaddyBot.m */,
 				840642DB19636E1500C45353 /* NewRobot.h */,
 				840642DC19636E1500C45353 /* NewRobot.m */,
 				65CC9158196141CF00838899 /* TurretRobot.h */,
@@ -403,11 +408,12 @@
 				629FCFF4193E71C300896E8C /* GameOverScene.m in Sources */,
 				844E8F29196322A70031AE8A /* AwesomeBestRobot.m in Sources */,
 				6244629A1937DDD300895F2D /* Robot.m in Sources */,
-				84F7FC2C1963860B00778913 /* DecadeSix.m in Sources */,
+				84F7FC2C1963860B00778913 /* DecadeSixTEC.m in Sources */,
 				840642DD19636E1500C45353 /* NewRobot.m in Sources */,
 				BC7636FB195BBCAA0070222B /* SimpleRobot.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
+				84D988991967F2DA007AE225 /* WetDaddyBot.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				65CC915A196141CF00838899 /* TurretRobot.m in Sources */,
 				62C4F430194141DE0047553C /* Helpers.m in Sources */,

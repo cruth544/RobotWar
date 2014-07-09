@@ -26,22 +26,22 @@ typedef NS_ENUM(NSInteger, RobotAction) {
   switch (hitDirection) {
     case RobotWallHitDirectionFront:
       [self turnRobotRight:90];
-          myRect = [self robotBoundingBox];
+//          myRect = [self robotBoundingBox];
 //          CCLOG(@"origin x: %f/norigin y: %f", myRect.origin.x, myRect.origin.y);
 //          CCLOG(@"size width: %f/n size height: %f", myRect.size.width, myRect.size.height);
-//      [self moveAhead:20];
+      [self moveAhead:20];
       break;
     case RobotWallHitDirectionRear:
       [self moveAhead:80];
       break;
-//    case RobotWallHitDirectionLeft:
-//      [self turnRobotRight:90];
-//      [self moveAhead:20];
-//      break;
-//    case RobotWallHitDirectionRight:
-//      [self turnRobotLeft:90];
-//      [self moveAhead:20];
-//      break;
+    case RobotWallHitDirectionLeft:
+      [self turnRobotRight:90];
+      [self moveAhead:20];
+      break;
+    case RobotWallHitDirectionRight:
+      [self turnRobotLeft:90];
+      [self moveAhead:20];
+      break;
     default:
       break;
   }
@@ -50,22 +50,22 @@ typedef NS_ENUM(NSInteger, RobotAction) {
   
 }
 
-//- (void)scannedRobot:(Robot *)robot atPosition:(CGPoint)position {
-//  if (_currentRobotAction != RobotActionTurnaround) {
-//    [self cancelActiveAction];
-//    
-//    [self turnRobotLeft:20];
-//    [self moveBack:80];
-//  }
-//}
+- (void)scannedRobot:(Robot *)robot atPosition:(CGPoint)position {
+  if (_currentRobotAction != RobotActionTurnaround) {
+    [self cancelActiveAction];
+    
+    [self turnRobotLeft:20];
+    [self moveBack:80];
+  }
+}
 
 - (void)run {
   while (true) {
     [self moveAhead:80];
-//    [self turnRobotRight:20];
+    [self turnRobotRight:20];
     [self moveAhead:100];
-//    [self shoot];
-//    [self turnRobotLeft:10];
+    [self shoot];
+    [self turnRobotLeft:10];
   }
 }
 

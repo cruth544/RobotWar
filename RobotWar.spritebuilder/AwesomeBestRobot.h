@@ -7,6 +7,8 @@
 //
 
 #import "Robot.h"
+#import "Robot_Framework.h"
+
 
 @interface AwesomeBestRobot : Robot
 

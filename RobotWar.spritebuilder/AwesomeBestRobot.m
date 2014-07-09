@@ -30,13 +30,18 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
     CGRect myRect;
     BOOL _didBulletHit;
     BOOL _reverse;
-    CGPoint _hitEnemyAngle;
+    CGPoint _goneInCircle;
     int _turnAmount;
 }
 
+//-(void)fire {
+//    [self turretFunction];
+//}
+
 - (id)init {
     if (self = [super init]) {
-        _currentState = AwesomeStateMoving;
+        _currentState = AwesomeTurretMode;
+        _turnAmount = 12;
     }
     
     return self;
@@ -75,19 +80,21 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
                 }
                 break;
             case AwesomeStateMoving:
-                _turnAmount = 10;
+                CCLOG(@"AwesomeStateMoving");
+                _turnAmount = 18;
                 _timeSinceLastEnemyHit = self.currentTimestamp;
                 if (_direction) {
                     [self moveAhead:10];
                 } else{
                     [self moveBack:10];
                 }
-                if (_timeSinceLastEnemyHit > 0.f) {
+                if (self.currentTimestamp - _timeSinceLastEnemyHit > 2.f) {
                     [self cancelActiveAction];
                     _currentState = AwesomeTurretMode;
                 }
                 break;
             case AwesomeTurretMode:
+                CCLOG(@"AwesomeStateTurretMode");
                 [self turretFunction];
                 break;
             case AwesomeIdleState:
@@ -101,7 +108,7 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
     if (!_didBulletHit) {
         [self turnGunRight:_turnAmount];
         [self shoot];
-//        _hitEnemyAngle = [self gunHeadingDirection];
+        _goneInCircle = [self gunHeadingDirection];
     }else{
         [self turnGunLeft:_turnAmount];
         [self shoot];
@@ -114,7 +121,7 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
 - (void)bulletHitEnemy:(Bullet *)bullet {
     _didBulletHit = !_didBulletHit;
     if (_turnAmount > 0){
-        _turnAmount -= 5;
+        _turnAmount -= 3;
     }
 }
 
@@ -139,6 +146,7 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
     }
     
     [self shoot];
+    _didBulletHit = !_didBulletHit;
     _currentState = AwesomeStateMoving;
 }
 

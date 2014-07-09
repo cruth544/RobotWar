@@ -52,6 +52,8 @@ static const float GUN_ANGLE_TOLERANCE = 2.0f;
 }
 
 - (void)run {
+    CCLOG(@"TurretRobot Arena Width: %f\nArena Heigth: %f", self.arenaDimensions.width, self.arenaDimensions.height);
+    CCLOG(@"TurretRobot Position x: %f\nPosition y: %f", self.robotBoundingBox.origin.x, self.robotBoundingBox.origin.y);
     while (true) {
         switch (_currentState) {
             case kTurretStateScanning:
